@@ -1,0 +1,4 @@
+a=72
+b=85
+f=(b-a)/a
+print('{0:.1f}%'.format(f))
