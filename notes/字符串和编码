@@ -5,4 +5,23 @@
   ord（）字符的整数表示
   chr（）编码转换成字符
   🌰print('\u4e2d\u6587'） ➡️  中文
-python对bytes雷惊的数据用带b前缀的单引号或双引号表示：x=b‘ABC’
+python对bytes类型的数据用带b前缀的单引号或双引号表示：x=b‘ABC’
+把bytes变为str需要用decode（）
+  🌰b‘ABC’.decode('ascii')
+    b'ABC'.decode('utf-8')
+len()函数 ➡️ str的字符数
+             bytes的字节数
+             
+格式化  方式%+
+       不确定用什么的时候，%s是万能的
+       当%是一个普通字符的时候：用%%表示一个%
+       
+format（）
+  🌰‘Hello,{0},成绩提升了{1:.1f}%’.format('小明',17.125)
+  
+  
+练习：
+a=72
+b=85
+f=(b-a)/a
+print('{0:.1f}%'.format(f))
