@@ -86,9 +86,9 @@ monsters = [
 ]
 
 # 初始化用户信息
-def init_user():
+def init_user(username = ''):
     return {
-        'name' : 'Francis',     # 名称
+        'name' : username,     # 名称
         'hp': 100,              # 血量
         'full_hp': 100,         # 最高血量
         'attack': 40,           # 攻击
@@ -382,14 +382,14 @@ def start_game():
             if res == -1: #玩家被击败
                 sel = choice(__('game_again'),['1','2'])
                 if sel == '1': # 重新开始
-                    user = init_user()
+                    user = init_user(user['name'])
                 else:
                     break #游戏结束
             elif res == 1 and event['type'] == 2: # 击败boss
                 output('game_over')
                 sel = choice(__('game_again'),['1','2'])
                 if sel == '1': # 重新开始
-                    user = init_user()
+                    user = init_user(user['name'])
                 else:
                     break #游戏结束
 
