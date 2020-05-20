@@ -16,15 +16,11 @@ def sumto(S,target):
     for idx,val in enumerate(S):
         if val == target: # 判断当前值是否等于目标值,如果相同,返回当前值
             return [val]
-        res1 = sumto(S[idx+1:],target) # 不包含当前元素的右侧子列表结果
+        res = sumto(S[idx+1:],target) # 不包含当前元素的右侧子列表结果
         res2 = sumto(S[idx+1:],target - val) # 包含当前元素的的右侧子列表结果
-        res = None
         if not res2 is None: # 当当前元素被使用且有效时记录当前的元素,返回到上一级
             res = res2+[val]
-        elif not res1 is None: # 
-            res = res1
         return res
     return None
 
-res = sumto(S,14)
-print(res)
+print(sumto(S,24))
