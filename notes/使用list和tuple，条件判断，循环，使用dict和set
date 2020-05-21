@@ -61,5 +61,4 @@ d.get('Tomas')
 1.通过add（key）可以添加元素到set中
 2.通过remove（key）可以删除元素
 3.set可以想象成数学上的无序和无重复元素的集合，可以有数学意义上的交集，并集的操作
-4.set和dict的
-
+4.set和dict的唯一区别：
