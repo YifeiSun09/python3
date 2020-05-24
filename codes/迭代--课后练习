@@ -1,0 +1,15 @@
+## 廖雪峰 迭代 课后练习
+
+def findMinAndMax(L):
+  if L==[]:
+    return(None,None)
+  else:
+    Min=L[0]
+    Max=L[0]
+    for i in L:
+      if i < Min:
+        Min=i
+      elif i > Max:
+        Max=i
+    return(Min,Max)
+print(findMinAndMax([]))
