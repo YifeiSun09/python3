@@ -79,4 +79,37 @@ f.close()
 >>> os.listdir('.') # 列出当前目录
 >>> os.isdir(路径) # 判断路径是否为目录
 >>> os.isfile(路径) # 判断当前路径是否为文件
+```  
+## 序列化  
+在python中被叫做pickling。  
+python中提供`pickle`模块实现序列化  
 ```
+>>> import pickle
+>>> d = dict(name='Bob', age = 20, score = 88)
+>>> pickle.dumps(d) # 序列化字典，将对象转为`bytes`
+```
+我们也可以使用`dump`将序列化之后的内容直接保存到文件中。  
+```
+>>> f = open('dump.txt','wb')
+>>> pickle.dump(d,f)
+>>> f.close()
+```
+相对的，我们可以使用`loads`及`load`方法将序列化之后的字符串反序列化成之前的内容。  
+```
+>>> f = open('dump.txt','rb')
+>>> d = pickle.load(f)
+>>> f.close()
+>>> d
+```  
+### JSON  
+在不同的编程语言中进行交流，我们需要将对象转成标准格式，其中我们可以使用XML,JSON等，现在相对常用且更合理的就是JSON。因为json是以字符串的形式表示出来的，所有的语言读取都不是特别负载.  
+python中的json模块提供了非常完善的json格式转化功能。  
+```
+将Python对象转为JSON:
+>>> import json
+>>> d = dict(name = "Bob", age = 20, score = 88)
+>>> json.dumps(d)
+{"age":20,"score":88,"name":"Bob"}
+```  
+相同的，它也有`dump`,`loads`,`load`方法。  
+但是在默认情况下，`json.dumps`方法操作对象会得到一个`TypeError`，需要自定义default参数指定转化方法。loads同理。  
