@@ -47,3 +47,18 @@ else:
    用continue跳过当前的这次循环
    两个语句通常都必须配合if语句使用
    
+   
+### dict
+###### 避免key不存在的错误的方法：
+1.通过in判断key是否存在：
+‘Tomas’ in d
+False
+2.通过dict提供的get（）方法，如果key不存在，可以返回None
+d.get('Tomas')
+
+###  set
+######  在set中没有重复的key
+1.通过add（key）可以添加元素到set中
+2.通过remove（key）可以删除元素
+3.set可以想象成数学上的无序和无重复元素的集合，可以有数学意义上的交集，并集的操作
+4.set和dict的唯一区别：
