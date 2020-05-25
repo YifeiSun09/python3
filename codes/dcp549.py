@@ -15,6 +15,14 @@ class Solution:
         self.arr = arr
     
     def result(self):
+        '''
+        结果验证
+
+        >>> Solution([6, 1, 3, 3, 3, 6, 6]).result()
+        1
+        >>> Solution([13, 19, 13, 13]).result()
+        19
+        '''
         if not isinstance(self.arr,list): # 传入的必须数列表
             return None
         res = [0] * 32 # 结果
@@ -27,4 +35,10 @@ class Solution:
             ans |= (val % 3) << idx
         return ans
 
-print(Solution([13, 19, 13, 13]).result())
+# print(Solution([13, 19, 13, 13]).result())
+# 使用文档测试验证
+if __name__ == '__main__':
+    import doctest
+    res = doctest.testmod() # 测试模块
+    if res.failed == 0:
+        print('测试成功')
