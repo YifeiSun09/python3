@@ -64,10 +64,10 @@ def name_of_email(addr):
     pattern2 = re.compile(r'(\w)@\w+(?:\.\w+)+')
     res = pattern1.match(addr)
     if res:
-        return res.groups(0)
+        return res.groups()[0]
     res = pattern2.match(addr)
     if res:
-        return res.groups(0)
+        return res.groups()[]
     return None
 
 print(name_of_email('<Tom Paris> tom@voyager.org'))
