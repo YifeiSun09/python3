@@ -1,3 +1,4 @@
+```
 def triangles():
     l = []
     while True:
@@ -10,3 +11,23 @@ for i in triangles():
     print(i)
     if n == 10:
         break
+```
+
+```
+def triangles():
+    L = [1]
+    while True:
+        yield L
+        L = [sum(i) for i in zip([0]+L, L+[0])]
+```
+
+```
+ef triangles():
+    ret = [1]
+    while True:
+        yield ret
+        for i in range(1, len(ret)):
+            ret[i] = pre[i] + pre[i - 1]
+        ret.append(1)
+        pre = ret[:]
+```
