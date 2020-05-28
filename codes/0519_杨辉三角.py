@@ -1,3 +1,4 @@
+##### 1  
 ```
 def triangles():
     l = []
@@ -12,7 +13,7 @@ for i in triangles():
     if n == 10:
         break
 ```
-
+##### 2  
 ```
 def triangles():
     L = [1]
@@ -20,7 +21,7 @@ def triangles():
         yield L
         L = [sum(i) for i in zip([0]+L, L+[0])]
 ```
-
+##### 3  
 ```
 ef triangles():
     ret = [1]
