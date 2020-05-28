@@ -1,0 +1,22 @@
+#####练习一  
+'''
+def normalize(name):
+    f=name.lower()
+    t=f[0].upper()+f[1:]
+    return t
+
+'''
+
+#####练习二  
+######解法一  
+'''
+def prod(L):
+    def ji(x,y):
+        return x*y
+    return reduce(ji,L)
+'''
+######解法二  
+'''
+def prod(L):
+    return reduce(lambda x,y:x*y,L)
+'''
