@@ -1,0 +1,34 @@
+####使用__slots__
+  使用__slots__来限制该class实例能添加的属性
+
+####使用@property
+  class Screen(object):
+
+  @property
+  def width(self):
+    return self._width
+  
+  @width.setter
+  def width(self,value):
+    self._width=value
+
+  @property
+  def height(self):
+    return self._height
+
+  @height.setter
+  def height(self,value):
+    self._height=value
+
+  @property
+  def resolution(self):
+    return self.width*self.height
+
+####多重继承--mixIn
+
+####定制类
+  __str__ 打印出用户看着方便的东西
+  __iter__类似于for...in循环
+  __getitem__ means get item...
+  __getattr__调用不存在的属性（只有在没有找到属性的情况下才调用它）
+  __call__可以直接对实例进行调用
