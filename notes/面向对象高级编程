@@ -32,3 +32,19 @@
   __getitem__ means get item...
   __getattr__调用不存在的属性（只有在没有找到属性的情况下才调用它）
   __call__可以直接对实例进行调用
+
+
+####使用枚举类
+
+@unique
+class Gender(Enum):
+    Male = 0
+    Female = 1
+
+class Student(object):
+    def __init__(self, name, gender):
+        self.name = name
+        self.gender = gender
+        
+        
+####使用元类
