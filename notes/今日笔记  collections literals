@@ -1,0 +1,7 @@
+List Tuple Dic和 Set
+例:
+
+fruits=["apple","lemon","banana"] #list
+numbers=(1,2,3,4,5) #tuple
+words={"first word":"banana","second word":"hi"} #dict
+chars={"a","b","c"} #set
